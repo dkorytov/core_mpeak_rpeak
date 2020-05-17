@@ -38,9 +38,9 @@ if __name__ == "__main__":
         axs[0,1].set_xlabel('M_infall');
         axs[0,2].set_xlabel('M_infall');
         axs[0,0].set_ylabel("M_peak")
-        axs[1,0].set_xlabel("M_peak/M_infall")
-        axs[1,1].set_xlabel("M_peak/M_infall")
-        axs[1,2].set_xlabel("M_peak/M_infall")
+        axs[1,0].set_xlabel("log10(M_peak/M_infall)")
+        axs[1,1].set_xlabel("log10(M_peak/M_infall)")
+        axs[1,2].set_xlabel("log10(M_peak/M_infall)")
 
         axs[0,0].hist2d(np.log10(cat['m_infall']), np.log10(cat['m_peak']), bins=100, cmap='Blues', norm=clr.LogNorm())
         axs[0,1].hist2d(np.log10(cat['m_infall'][slct_cen]), np.log10(cat['m_peak'][slct_cen]), bins=100, cmap='Blues', norm=clr.LogNorm())
@@ -60,9 +60,9 @@ if __name__ == "__main__":
         axs[0,0].set_xlabel('R_now');
         axs[0,1].set_xlabel('R_now');
         axs[0,2].set_xlabel('R_now');
-        axs[1,0].set_xlabel('R_peak/R_now')
-        axs[1,1].set_xlabel('R_peak/R_now')
-        axs[1,2].set_xlabel('R_peak/R_now')
+        axs[1,0].set_xlabel('log10(R_peak/R_now)')
+        axs[1,1].set_xlabel('log10(R_peak/R_now)')
+        axs[1,2].set_xlabel('log10(R_peak/R_now)')
         
         axs[0,0].hist2d(np.log10(cat['radius']), np.log10(cat['r_peak']), bins=100, cmap='Blues', norm=clr.LogNorm())
         axs[0,1].hist2d(np.log10(cat['radius'][slct_cen]), np.log10(cat['r_peak'][slct_cen]), bins=100, cmap='Blues', norm=clr.LogNorm())
